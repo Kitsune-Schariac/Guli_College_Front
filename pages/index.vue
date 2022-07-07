@@ -114,6 +114,7 @@
 <script>
 import banner from '@/api/banner'
 import index from '@/api/index'
+import cookie from "_js-cookie@3.0.1@js-cookie";
 export default {
   data() {
     return {
@@ -153,7 +154,7 @@ export default {
           this.courseList = res.data.data.eduCourses
           this.teacherList = res.data.data.teachers
         })
-    }
+    },
   },
 
 

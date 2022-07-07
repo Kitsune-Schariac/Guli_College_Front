@@ -3,35 +3,42 @@
     "name": "course",
     "path": "/course",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\course\\\\index.vue",
-    "chunkName": "pages/course/index",
-    "_name": "_53d8516e"
+    "chunkName": "pages/course/index"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\login.vue",
+    "chunkName": "pages/login"
+  },
+  {
+    "name": "register",
+    "path": "/register",
+    "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\register.vue",
+    "chunkName": "pages/register"
   },
   {
     "name": "teacher",
     "path": "/teacher",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\teacher\\\\index.vue",
-    "chunkName": "pages/teacher/index",
-    "_name": "_dfd45fae"
+    "chunkName": "pages/teacher/index"
   },
   {
     "name": "course-id",
     "path": "/course/:id",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\course\\\\_id.vue",
-    "chunkName": "pages/course/_id",
-    "_name": "_b2f05154"
+    "chunkName": "pages/course/_id"
   },
   {
     "name": "teacher-id",
     "path": "/teacher/:id",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\teacher\\\\_id.vue",
-    "chunkName": "pages/teacher/_id",
-    "_name": "_6ffbc8d1"
+    "chunkName": "pages/teacher/_id"
   },
   {
     "name": "index",
     "path": "/",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_6cea6a2e"
+    "chunkName": "pages/index"
   }
 ]
