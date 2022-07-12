@@ -53,7 +53,7 @@
                   class="vam picImg"
                   alt
                 >
-                <span class="vam disIb" id="userName">{{loginInfo.nickname}}</span>
+                <span class="vam disIb" id="userName">{{ loginInfo.nickname }}</span>
               </a>
               <a href="javascript:void(0);" title="退出" @click="logout()" class="ml5">退出</a>
             </li>
@@ -134,6 +134,7 @@ import "~/assets/css/reset.css";
 import "~/assets/css/theme.css";
 import "~/assets/css/global.css";
 import "~/assets/css/web.css";
+import loginApi from '@/api/login'
 
 import cookie from "js-cookie";
 
@@ -152,23 +153,44 @@ export default {
       }
     }
   },
-  created(){
-    this.getInfo()
+  created() {
+
+    //获取路径里的token值
+    this.token = this.$route.query.token
+    if (this.token) {
+      //当确定token有值的时候
+      this.wxLogin()
+    }
+
+    this.showInfo()
   },
   methods: {
 
+    wxLogin() {
+      cookie.set("guli_token", this.token, {domain: "localhost"})
+      cookie.set('guli_ucenter', '', { domain: 'localhost' })
+      console.log('first')
+      //根据token值获取用户信息
+      loginApi.getUserInfo()
+        .then (res => {
+          this.loginInfo = res.data.data.info
+          // 把对象转化成字符串
+          cookie.set('guli_ucenter', JSON.stringify(this.loginInfo))
+        })
+    },
+
     //从cookie获取用户信息
-    getInfo(){
+    showInfo() {
       var userStr = cookie.get('guli_ucenter')
-      //把字符串序列化成json对象
-      if(userStr) {
+      //把字符串序列化成一个json对象
+      if (userStr) {
         this.loginInfo = JSON.parse(userStr)
         // this.loginInfo = userStr
         console.log(this.loginInfo)
       }
       // this.logOut();
     },
-    logout(){
+    logout() {
       console.log("clear cookie")
       cookie.set('guli_token', '', {domain: 'localhost'})
       cookie.set('guli_ucenter', '', {domain: 'localhost'})
