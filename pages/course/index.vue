@@ -47,15 +47,19 @@
           </section>
           <section class="fl">
             <ol class="js-tap clearfix">
-              <li>
-                <a title="关注度" href="#">关注度</a>
+              <li :class="{'current bg-orange':buyCountSort!=''}">
+                <a title="销量" href="javascript:void(0);" @click="searchBuyCount()">销量
+                  <span :class="{hide:buyCountSort==''}">↓</span>
+                </a>
               </li>
-              <li>
-                <a title="最新" href="#">最新</a>
+              <li :class="{'current bg-orange':gmtCreateSort!=''}">
+                <a title="最新" href="javascript:void(0);" @click="searchGmtCreate()">最新
+                  <span :class="{hide:gmtCreateSort==''}">↓</span>
+                </a>
               </li>
-              <li class="current bg-orange">
-                <a title="价格" href="#">价格&nbsp;
-                  <span>↓</span>
+              <li :class="{'current bg-orange':priceSort!=''}">
+                <a title="价格" href="javascript:void(0);" @click="searchPrice()">价格&nbsp;
+                  <span :class="{hide:priceSort==''}">↓</span>
                 </a>
               </li>
             </ol>
@@ -107,6 +111,7 @@
               title="首页"
               @click.prevent="gotoPage(1)">首</a>
             <a
+              v-show="data.hasPrevious"
               :class="{undisable: !data.hasPrevious}"
               href="#"
               title="前一页"
@@ -119,6 +124,7 @@
               href="#"
               @click.prevent="gotoPage(page)">{{ page }}</a>
             <a
+              v-show="data.hasNext"
               :class="{undisable: !data.hasNext}"
               href="#"
               title="后一页"
@@ -178,6 +184,7 @@ export default {
     },
     //分页切换
     gotoPage(page) {
+
       courseApi.getCourseList(page, 8, this.searchObj)
         .then(res => {
           this.data = res.data.data
