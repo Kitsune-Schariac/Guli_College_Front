@@ -4,13 +4,13 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _53d8516e = () => interopDefault(import('..\\pages\\course\\index.vue' /* webpackChunkName: "pages/course/index" */))
-const _d99b2400 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
-const _37dfeadc = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
-const _dfd45fae = () => interopDefault(import('..\\pages\\teacher\\index.vue' /* webpackChunkName: "pages/teacher/index" */))
-const _b2f05154 = () => interopDefault(import('..\\pages\\course\\_id.vue' /* webpackChunkName: "pages/course/_id" */))
-const _6ffbc8d1 = () => interopDefault(import('..\\pages\\teacher\\_id.vue' /* webpackChunkName: "pages/teacher/_id" */))
-const _6cea6a2e = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _1b993efb = () => interopDefault(import('..\\pages\\course\\index.vue' /* webpackChunkName: "pages/course/index" */))
+const _3aac388d = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _e44c0da2 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
+const _7f1ad788 = () => interopDefault(import('..\\pages\\teacher\\index.vue' /* webpackChunkName: "pages/teacher/index" */))
+const _465e77ba = () => interopDefault(import('..\\pages\\course\\_id.vue' /* webpackChunkName: "pages/course/_id" */))
+const _02d075a4 = () => interopDefault(import('..\\pages\\teacher\\_id.vue' /* webpackChunkName: "pages/teacher/_id" */))
+const _71049576 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -25,31 +25,31 @@ export const routerOptions = {
 
   routes: [{
     path: "/course",
-    component: _53d8516e,
+    component: _1b993efb,
     name: "course"
   }, {
     path: "/login",
-    component: _d99b2400,
+    component: _3aac388d,
     name: "login"
   }, {
     path: "/register",
-    component: _37dfeadc,
+    component: _e44c0da2,
     name: "register"
   }, {
     path: "/teacher",
-    component: _dfd45fae,
+    component: _7f1ad788,
     name: "teacher"
   }, {
     path: "/course/:id",
-    component: _b2f05154,
+    component: _465e77ba,
     name: "course-id"
   }, {
     path: "/teacher/:id",
-    component: _6ffbc8d1,
+    component: _02d075a4,
     name: "teacher-id"
   }, {
     path: "/",
-    component: _6cea6a2e,
+    component: _71049576,
     name: "index"
   }],
 

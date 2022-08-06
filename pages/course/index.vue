@@ -79,11 +79,11 @@
                   <section class="course-img">
                     <img :src="course.cover" class="img-responsive" :alt="course.title">
                     <div class="cc-mask">
-                      <a href="/course/1" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
+                      <a :href="'/course/' + course.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
                     </div>
                   </section>
                   <h3 class="hLh30 txtOf mt10">
-                    <a href="/course/1" :title="course.title" class="course-title fsize18 c-333">{{ course.title }}</a>
+                    <a :href="'/course/' + course.id" :title="course.title" class="course-title fsize18 c-333">{{ course.title }}</a>
                   </h3>
                   <section class="mt10 hLh20 of">
                     <span class="fr jgTag bg-green" >
@@ -203,7 +203,7 @@ export default {
         this.subSubjectList = []
         this.searchObj.subjectParentId = ''
         //查询课程
-        this.gotoPage(this.page, 8, this.searchObj)
+        this.gotoPage(this.page)
         return 0
       }
 
@@ -214,14 +214,50 @@ export default {
 
 
       //查询课程
-      this.gotoPage(this.page, 8, this.searchObj)
+      this.gotoPage(this.page)
 
     },
     //切换二级分类
     changeTwoSubject(id){
       this.searchObj.subjectId = id
-      this.gotoPage(this.page, 8, this.searchObj)
+      this.gotoPage(this.page)
+    },
+    //根据销量排序
+    searchBuyCount(){
+      //用searchObj的值来控制查询条件
+      this.searchObj.buyCountSort = 'ok'
+      this.searchObj.gmtCreateSort = ''
+      this.searchObj.priceSort = ''
+      //用页面的值来控制样式的显示
+      this.buyCountSort = this.searchObj.buyCountSort
+      this.gmtCreateSort = this.searchObj.gmtCreateSort
+      this.priceSort = this.searchObj.priceSort
+
+      this.gotoPage(1)
+    },
+    searchGmtCreate(){
+      this.searchObj.gmtCreateSort = 'ok'
+      this.searchObj.buyCountSort = ''
+      this.searchObj.priceSort = ''
+
+      this.buyCountSort = this.searchObj.buyCountSort
+      this.gmtCreateSort = this.searchObj.gmtCreateSort
+      this.priceSort = this.searchObj.priceSort
+
+      this.gotoPage(1)
+    },
+    searchPrice(){
+      this.searchObj.priceSort = 'ok'
+      this.searchObj.buyCountSort = ''
+      this.searchObj.gmtCreateSort = ''
+
+      this.buyCountSort = this.searchObj.buyCountSort
+      this.gmtCreateSort = this.searchObj.gmtCreateSort
+      this.priceSort = this.searchObj.priceSort
+
+      this.gotoPage(1)
     }
+
   }
 
 };
