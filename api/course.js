@@ -15,5 +15,12 @@ export default {
       url: '/eduservice/edu-subject/getAllSubject',
       method: 'get'
     })
+  },
+  //查询详情的方法
+  getCourseInfo(id){
+    return request({
+      url: 'eduservice/coursefront/getFrontCourseInfo/' + id,
+      method: 'get'
+    })
   }
 }

@@ -74,7 +74,7 @@
           <!-- /无数据提示 结束-->
           <article class="comm-course-list" v-if="data.total > 0">
             <ul class="of" id="bna">
-              <li v-for="course in data.records">
+              <li v-for="course in data.records" :key="course.id">
                 <div class="cc-l-wrap">
                   <section class="course-img">
                     <img :src="course.cover" class="img-responsive" :alt="course.title">
