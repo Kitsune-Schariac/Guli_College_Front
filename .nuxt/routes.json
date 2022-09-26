@@ -35,6 +35,27 @@
     "_name": "_b2f05154"
   },
   {
+    "name": "orders-oid",
+    "path": "/orders/:oid?",
+    "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\orders\\\\_oid.vue",
+    "chunkName": "pages/orders/_oid",
+    "_name": "_141000e9"
+  },
+  {
+    "name": "pay-pid",
+    "path": "/pay/:pid?",
+    "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\pay\\\\_pid.vue",
+    "chunkName": "pages/pay/_pid",
+    "_name": "_3a6d288b"
+  },
+  {
+    "name": "player-vid",
+    "path": "/player/:vid?",
+    "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\player\\\\_vid.vue",
+    "chunkName": "pages/player/_vid",
+    "_name": "_50820cac"
+  },
+  {
     "name": "teacher-id",
     "path": "/teacher/:id",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\teacher\\\\_id.vue",

@@ -12,7 +12,7 @@
       <div>
         <article class="c-v-pic-wrap" style="height: 357px;">
           <section class="p-h-video-box" id="videoPlay">
-            <img :src="courseWebVo.cover" :alt="courseWebVo.title" class="dis c-v-pic">
+            <img height="357px" :src="courseWebVo.cover" :alt="courseWebVo.title" class="dis c-v-pic">
           </section>
         </article>
         <aside class="c-attr-wrap">
@@ -30,11 +30,14 @@
             <section class="c-attr-mt of">
               <span class="ml10 vam">
                 <em class="icon18 scIcon"></em>
-                <a class="c-fff vam" title="收藏" href="#" >{{ courseWebVo.buyCount }}</a>
+                <a class="c-fff vam" title="收藏" href="#">{{ courseWebVo.buyCount }}</a>
               </span>
             </section>
-            <section class="c-attr-mt">
+            <section v-if="isbuy || Number(courseWebVo.price) === 0" class="c-attr-mt">
               <a href="#" title="立即观看" class="comm-btn c-btn-3">立即观看</a>
+            </section>
+            <section v-if="!isbuy && Number(courseWebVo.price) !== 0" class="c-attr-mt">
+              <a @click="createOrders()" href="#" title="立即购买" class="comm-btn c-btn-3">立即购买</a>
             </section>
           </section>
         </aside>
@@ -86,7 +89,7 @@
                   <div class="course-txt-body-wrap">
                     <section class="course-txt-body">
                       <p v-html="courseWebVo.description">
-                        {{ courseWebVo.description}}
+                        {{ courseWebVo.description }}
                       </p>
                     </section>
                   </div>
@@ -107,7 +110,7 @@
                             </a>
                             <ol class="lh-menu-ol" style="display: block;">
                               <li class="lh-menu-second ml30" v-for="video in chapter.children" :key="video.id">
-                                <a href="#" title>
+                                <a :href="'/player/' + video.videoSourceId" title target="_blank">
                                   <span class="fr">
                                     <i class="free-icon vam mr10">免费试听</i>
                                   </span>
@@ -160,16 +163,52 @@
 </template>
 <script>
 import courseApi from '@/api/course'
-export default {
+import orderApi from '@/api/order'
 
-  asyncData({ params, error }) {
-    return courseApi.getCourseInfo(params.id)
-      .then(response => {
-        return {
-          courseWebVo : response.data.data.courseWebVo,
-          chapterVideoList : response.data.data.chapterVideoList
-        }
-      })
+export default {
+  asyncData({params, error}) {
+    return {courseId : params.id}
+  },
+  data() {
+    return {
+      courseInfo: {},
+      chapterVideoList: [],
+      isbuy: false,
+      courseWebVo: {}
+    }
+  },
+  created() {
+    this.courseId = this.$route.params.id
+
+    this.initCourseInfo();
+  },
+
+
+  methods: {
+
+    //查询课程详情信息
+    initCourseInfo(){
+      console.log("init")
+      courseApi.getCourseInfo(this.courseId)
+        .then(response => {
+            this.courseWebVo = response.data.data.courseWebVo
+            this.chapterVideoList = response.data.data.chapterVideoList
+            this.isbuy = response.data.data.isbuy
+          console.log(response)
+          console.log("init end" + this.isbuy)
+        })
+    },
+
+    //生成订单
+    createOrders() {
+      orderApi.createOrders(this.courseId)
+        .then(response => {
+          //获取返回的订单号
+          //跳转到订单显示页面
+          this.$router.push({path: '/orders/' + response.data.data.orderId})
+        })
+    }
+
   }
 
 };

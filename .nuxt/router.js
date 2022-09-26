@@ -9,6 +9,9 @@ const _d99b2400 = () => interopDefault(import('..\\pages\\login.vue' /* webpackC
 const _37dfeadc = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
 const _dfd45fae = () => interopDefault(import('..\\pages\\teacher\\index.vue' /* webpackChunkName: "pages/teacher/index" */))
 const _b2f05154 = () => interopDefault(import('..\\pages\\course\\_id.vue' /* webpackChunkName: "pages/course/_id" */))
+const _141000e9 = () => interopDefault(import('..\\pages\\orders\\_oid.vue' /* webpackChunkName: "pages/orders/_oid" */))
+const _3a6d288b = () => interopDefault(import('..\\pages\\pay\\_pid.vue' /* webpackChunkName: "pages/pay/_pid" */))
+const _50820cac = () => interopDefault(import('..\\pages\\player\\_vid.vue' /* webpackChunkName: "pages/player/_vid" */))
 const _6ffbc8d1 = () => interopDefault(import('..\\pages\\teacher\\_id.vue' /* webpackChunkName: "pages/teacher/_id" */))
 const _6cea6a2e = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -43,6 +46,18 @@ export const routerOptions = {
     path: "/course/:id",
     component: _b2f05154,
     name: "course-id"
+  }, {
+    path: "/orders/:oid?",
+    component: _141000e9,
+    name: "orders-oid"
+  }, {
+    path: "/pay/:pid?",
+    component: _3a6d288b,
+    name: "pay-pid"
+  }, {
+    path: "/player/:vid?",
+    component: _50820cac,
+    name: "player-vid"
   }, {
     path: "/teacher/:id",
     component: _6ffbc8d1,
