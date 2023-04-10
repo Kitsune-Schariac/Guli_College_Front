@@ -3,70 +3,60 @@
     "name": "course",
     "path": "/course",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\course\\\\index.vue",
-    "chunkName": "pages/course/index",
-    "_name": "_53d8516e"
+    "chunkName": "pages/course/index"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\login.vue",
-    "chunkName": "pages/login",
-    "_name": "_d99b2400"
+    "chunkName": "pages/login"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\register.vue",
-    "chunkName": "pages/register",
-    "_name": "_37dfeadc"
+    "chunkName": "pages/register"
   },
   {
     "name": "teacher",
     "path": "/teacher",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\teacher\\\\index.vue",
-    "chunkName": "pages/teacher/index",
-    "_name": "_dfd45fae"
+    "chunkName": "pages/teacher/index"
   },
   {
     "name": "course-id",
     "path": "/course/:id",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\course\\\\_id.vue",
-    "chunkName": "pages/course/_id",
-    "_name": "_b2f05154"
+    "chunkName": "pages/course/_id"
   },
   {
     "name": "orders-oid",
     "path": "/orders/:oid?",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\orders\\\\_oid.vue",
-    "chunkName": "pages/orders/_oid",
-    "_name": "_141000e9"
+    "chunkName": "pages/orders/_oid"
   },
   {
     "name": "pay-pid",
     "path": "/pay/:pid?",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\pay\\\\_pid.vue",
-    "chunkName": "pages/pay/_pid",
-    "_name": "_3a6d288b"
+    "chunkName": "pages/pay/_pid"
   },
   {
     "name": "player-vid",
     "path": "/player/:vid?",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\player\\\\_vid.vue",
-    "chunkName": "pages/player/_vid",
-    "_name": "_50820cac"
+    "chunkName": "pages/player/_vid"
   },
   {
     "name": "teacher-id",
     "path": "/teacher/:id",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\teacher\\\\_id.vue",
-    "chunkName": "pages/teacher/_id",
-    "_name": "_6ffbc8d1"
+    "chunkName": "pages/teacher/_id"
   },
   {
     "name": "index",
     "path": "/",
     "component": "F:\\\\workspace\\\\Guli\\\\Guli_College_Front\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_6cea6a2e"
+    "chunkName": "pages/index"
   }
 ]
