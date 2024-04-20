@@ -15,6 +15,7 @@ import vod from '@/api/vod'
 export default {
   layout: 'video', //应用video布局
   asyncData({params, error}) {
+    console.log(params, "视频播放页面params")
     return vod.getPlayAuth(params.vid)
       .then(response => {
         return {

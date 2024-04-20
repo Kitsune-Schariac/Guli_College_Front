@@ -21,17 +21,17 @@
             <i class="iconfont icon-phone"/>
           </div>
         </el-form-item>
-        <el-form-item class="input-prepend restyle no-radius" prop="code"
-                      :rules="[{ required: true, message: '请输入验证码', trigger: 'blur' }]">
-          <div style="width: 100%;display: block;float: left;position: relative">
-            <el-input type="text" placeholder="验证码" v-model="params.code"/>
-            <i class="iconfont icon-phone"/>
-          </div>
-          <div class="btn" style="position:absolute;right: 0;top: 6px;width: 40%;">
-            <a id="getCode" href="javascript:" type="button" @click="getCodeFun()" :value="codeTest"
-               style="border: none;background-color: unset">{{ codeTest }}</a>
-          </div>
-        </el-form-item>
+<!--        <el-form-item class="input-prepend restyle no-radius" prop="code"-->
+<!--                      :rules="[{ required: true, message: '请输入验证码', trigger: 'blur' }]">-->
+<!--          <div style="width: 100%;display: block;float: left;position: relative">-->
+<!--            <el-input type="text" placeholder="验证码" v-model="params.code"/>-->
+<!--            <i class="iconfont icon-phone"/>-->
+<!--          </div>-->
+<!--          <div class="btn" style="position:absolute;right: 0;top: 6px;width: 40%;">-->
+<!--            <a id="getCode" href="javascript:" type="button" @click="getCodeFun()" :value="codeTest"-->
+<!--               style="border: none;background-color: unset">{{ codeTest }}</a>-->
+<!--          </div>-->
+<!--        </el-form-item>-->
         <el-form-item class="input-prepend" prop="password"
                       :rules="[{ required: true, message: '请输入密码', trigger: 'blur' }]">
           <div>
